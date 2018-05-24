@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-//hacer un programa que imprima numeros aleatorios
+#include <time.h>
+//hacer un programa que imprima numeros del 1 al 6 a partir de un time aleatorio
 
 int main(){
 
-    char n;
-    printf("Dame un caracter \n");
-    n=getchar();    
-    
-    srand(n);
+    srand(time(NULL));
     rand();
-    printf("%d\n", rand());
+    printf("%d\n", ((rand())%6)+1);
 }
 
